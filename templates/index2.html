@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Learning App</title>
+        <h1 style="border:blue; border-width: 5px;  border-style: solid;">Cardiovascular Diseases Prediction Model Using Machine Learning</h1>
+        <p>This Web Based Application is based on a Machine Learning Algorithm that predicts a patient's possibility of having cardiovascular diseases or not. [Note that this model is 73% accurate]</p>
+        <br>
+         <br>
+        <p1>Instructions:<br>
+            1.Enter values of the given fields.<br>
+            2.Click the predict button.
+        </p1>    
+        
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+    </head>
+    
+    <body>
+        
+
+    
+        <form name="form", method="POST", action="http://localhost:5000/predict" style="text-align: center;">
+            <br>
+             <br>
+               <br>
+                 <br>
+                   <br>
+                     <br>
+                       <br>
+                         <br>
+                          <br>
+                            <br>
+                              <br>
+                               <br>
+                                <br>
+                                  <br>
+            <input type="text" name="id" placeholder="id" required="required"/>
+        <input type="text" name="age" placeholder="age" required="required"/>
+        <input type="text" name="gender" placeholder="gender" required="required"/>
+            <br><br>
+            <input type="text" name="height" placeholder="height" required="required"/>
+        <input type="text" name="weight" placeholder="weight" required="required"/>
+        <input type="text" name="ap_hi" placeholder="ap_hi" required="required"/>
+        <br></br>
+        <input type="text" name="ap_lo" placeholder="ap_lo" required="required"/>
+        <input type="text" name="cholesterol" placeholder="cholesterol" required="required"/>
+        <input type="text" name="gluc" placeholder="gluc" required="required"/>
+        <br></br>
+        <input type="text" name="smoke" placeholder="smoke" required="required"/>
+        <input type="text" name="alco" placeholder="alco" required="required"/>
+        <input type="text" name="active" placeholder="active" required="required"/>
+            <br><br>
+            <button value="Submit">Predict</button>
+        </form>
+        <p style="text-align: center;">{{prediction_text}}</p>
+
+    </body>
+</html>
